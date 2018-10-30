@@ -1,0 +1,11 @@
+<h1>Hola, aqui estan las mascotas!:</h1>
+<ul>
+  <% @pets.each do |pet|%>
+  <li><a href="/pets/<%= pet.id %>"><%= pet.name %></a></li>
+  <li> <form action="/pets/<%= pet.id %>" method="post"></li>
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="eliminar mascota">
+       </form>
+  </li>
+  <% end %>
+</ul>

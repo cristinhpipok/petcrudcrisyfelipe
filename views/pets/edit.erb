@@ -1,0 +1,5 @@
+<form action="/pets/<%= @pet.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="name">
+  <input type="submit" value="editar">
+</form>
